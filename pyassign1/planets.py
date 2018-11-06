@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""planets.py.py: Description of what planets does.
+"""planets.py: Description of what planets does.
 
 __author__ = "Lian Feiyue"
 __pkuid__  = "1800011733"
