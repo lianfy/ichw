@@ -30,7 +30,7 @@ def orbit(t, x):
 
 
 def mov(t, x, y, i):
-    t.goto(x*math.cos(math.radians(100*i/(x+y))), y*math.sin(math.radians(100*i/(x+y))))
+    t.goto(x*math.cos(math.radians(200*i/(x+y))), y*math.sin(math.radians(200*i/(x+y))))
 
 
 orbit(a, 0)
@@ -40,7 +40,7 @@ orbit(d, 100.8)
 orbit(e, 129.1)
 orbit(f, 233.6)
 orbit(g, 318.1)
-for i in range(1000):
+for i in range(1500):
     mov(b, 68.32, 55.45, i)
     mov(c, 85.34, 84.76, i)
     mov(d, 100.8, 99.16, i)
