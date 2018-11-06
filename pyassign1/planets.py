@@ -30,7 +30,7 @@ def orbit(t, x):
 
 
 def mov(t, x, y, i):
-    t.goto(x*math.cos(math.radians(200*i/(x+y))), y*math.sin(math.radians(200*i/(x+y))))
+     t.goto(x*math.cos(math.radians(4*10**6*i/(x+y)**3)), y*math.sin(math.radians(4*10**6*i/(x+y)**3)))
 
 
 orbit(a, 0)
@@ -48,5 +48,5 @@ for i in range(1500):
     mov(f, 233.6, 222.5, i)
     mov(g, 318.1, 300.1, i)
 turtle.mainloop()
-#  v^2正比于1/r,所以v正比于r^-1/2
+#  由开普勒第三定律，w^2正比于r^-3,所以w正比于r^-3/2
 #  本题x，y取100*r^1/2，单位为天文单位
