@@ -29,7 +29,7 @@ orbit(d, "red", 100.8)
 orbit(e, "black", 129.1)
 orbit(f, "orange", 233.6)
 orbit(g, "lightblue", 318.1)
-for i in range(20000):
+for i in range(25000):
     mov(b, 68.32, 55.45, i)
     mov(c, 85.34, 84.76, i)
     mov(d, 100.8, 99.16, i)
