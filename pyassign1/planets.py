@@ -30,7 +30,7 @@ def orbit(t, co, x):
 
 
 def mov(t, x, y, e, i):
-    """m为椭圆的半长轴，n为椭圆的半短轴，e为离心率
+    """m-(x-y)/2为椭圆的半长轴，n为椭圆的半短轴，e为离心率
     """
     m = (x-y)/2+(x+y)/2*math.cos(math.radians(10**7*i/(x+y)**3))
     n = (x+y)/2*(1-e**2)**0.5*math.sin(math.radians(10**7*i/(x+y)**3))
