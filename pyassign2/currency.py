@@ -32,16 +32,17 @@ def get_the_number(s):
 def exchange(currency_from, currency_to, amount_from):
     """先判断amount_from是否为数值，如不是返回数量输入有误
     将货币输入大写，避免因小写而错误
-    从网站上得到字符串并解码
-    将函数"get_the_number(jstr)的值返回即得兑换数量
+    再从网站上得到字符串并解码
+    最后将函数"get_the_number(jstr)的值返回即得兑换数量
     """
-    if type(amount_from) is not float and type(amount_from) is not int:
+    try:
+        amountfl = float(amount_from)
+    except ValueError:
         return "amount_from invalid"
     else:
         a = str(currency_from).upper()
         b = str(currency_to).upper()
-        c = float(amount_from)
-        s = 'from={}&to={}&amt={}'.format(a, b, c)
+        s = 'from={}&to={}&amt={}'.format(a, b, amountfl)
         doc = urlopen('http://cs1110.cs.cornell.edu/2016fa/a1server.php?'+s)
         docstr = doc.read()
         doc.close()
@@ -68,18 +69,28 @@ false, "error" : "Exchange currency code is invalid." }''').split(" "))[0])
 
 
 def test_all():
+    """测试所有函数
+    """
     test_get_the_exchange()
     test_get_the_number()
     print("All tests passed")
 
 
 def main():
+    """先测试函数和进行输出测试
+    然后可以输入兑换多少数值的某种货币
+    输出能兑换另一种货币多少数值
+    """
     test_all()
     print(exchange("USD", "EUR", 5.5))
     print(exchange("CNY", "usd", 8))
     print(exchange("USD", "xxx", 1))
     print(exchange("xxx", "USD", 1))
     print(exchange("CNY", "usd", "A"))
+    get_from = input()
+    get_to = input()
+    amount = input()
+    print(exchange(get_from, get_to, amount))
 
 
 if __name__ == "__main__":
