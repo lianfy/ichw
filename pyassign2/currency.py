@@ -87,11 +87,11 @@ def main():
     print(exchange("USD", "xxx", 1))
     print(exchange("xxx", "USD", 1))
     print(exchange("CNY", "usd", "A"))
-    get_from = input()
-    get_to = input()
-    amount = input()
-    print(exchange(get_from, get_to, amount))
+    get_from = input("please enter the currency to be changed：")
+    get_to = input("please enter the currency to get：")
+    amount = input("please enter the amount of the currency：")
+    print("you can get:" + exchange(get_from, get_to, amount))
 
-
+    
 if __name__ == "__main__":
     main()
