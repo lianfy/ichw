@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""planets.py: Description of what planets does.
+"""currency.py: Description of how much foreign currency you will get.
 
 __author__ = "Lian Feiyue"
 __pkuid__  = "1800011733"
