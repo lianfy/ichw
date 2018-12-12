@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""planets.py: Description of what planets does.
+"""tiles.py: Description of how to pave tiles.
 
 __author__ = "Lian Feiyue"
 __pkuid__  = "1800011733"
