@@ -40,8 +40,8 @@ if __name__ == '__main__':
         my_socket = urllib.request.urlopen((sys.argv[1]))
         dta = my_socket.read().decode()
         my_socket.close()
-    except Exception:
-        print("URL输入错误！")
+    except Exception as err:
+        print(err)
     else:
         if len(sys.argv) == 2:
             wcount(dta)
