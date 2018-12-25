@@ -24,7 +24,9 @@ def wcount(lines, topn=10):
         counts[i] = counts.get(i, 0) + 1
     s = sorted(counts.items(), key=lambda x: x[1], reverse=True)
     lst = []
-    for j in range(int(topn)):
+    if topn > len(s):
+        topn = len(s)
+    for j in range(topn):
         lst.append(s[j])
     for (a, b) in lst:
         print(a + '\t', b)
@@ -46,4 +48,4 @@ if __name__ == '__main__':
         if len(sys.argv) == 2:
             wcount(dta)
         else:
-            wcount(dta, sys.argv[2])
+            wcount(dta, int(sys.argv[2]))
